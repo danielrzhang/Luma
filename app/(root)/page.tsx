@@ -1,4 +1,5 @@
 import InterviewCard from '@/components/InterviewCard'
+import SignOutButton from '@/components/LogOutButton'
 import { Button } from '@/components/ui/button'
 import { getCurrentUser } from '@/lib/actions/auth.action'
 import { getInterviewsByUserId, getLatestInterviews } from '@/lib/actions/general.action'
@@ -14,8 +15,8 @@ const Page = async () => {
     await getLatestInterviews({userId: user?.id!})
   ])
 
-  const hasPastInterviews = userInterviews?.length > 0
-  const hasUpcomingInteviews = latestInterviews?.length > 0
+  const hasPastInterviews = userInterviews?.length! > 0
+  const hasUpcomingInteviews = latestInterviews?.length! > 0
 
   return (
     <>

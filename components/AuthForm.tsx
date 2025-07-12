@@ -92,8 +92,10 @@ const AuthForm = ({type}: {type: FormType}) => {
           <h2 className="text-primary-100">Luma</h2>
         </div>
 
-        <h3>Practice job interviews with AI</h3>
-      
+        <div className="flex flex-row justify-center">
+          <h3>Practice job interviews with AI</h3>
+        </div>
+        
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6 mt-4 form">
             {!isSignIn && (
